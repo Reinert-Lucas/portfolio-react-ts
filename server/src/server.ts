@@ -4,14 +4,14 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 const corsOptions = {
     origin: 'http://localhost:5173', //https://reinert-lucas.netlify.app
-    methods: 'GET',
+    // methods: 'GET',
 }
+dotenv.config();
 const app = express();
 const PORT = process.env.PORT;
 
 app.use(cors(corsOptions));
 app.use(express.json());
-dotenv.config();
 
 app.get('/api/data', async (_req, res) => {
     const sql = postgres(`${process.env.DATABASE_URL}`);

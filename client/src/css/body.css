@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap');
+
+.bodyPpal {
+  margin: 0;
+  background-color: var(--bg-main);
+  font-family: var(--font-title);
+  color: var(--text-main);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.projects {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.title {
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 1rem;
+  color: var(--text-main);
+}
+
+.desc {
+  font-size: 16px;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin: 1.5rem 0;
+  border: 4px solid var(--accent-blue);
+  box-shadow: 0 0 10px var(--accent-blue);
+}
+
+.langsTitle {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  margin: 2rem 0 1rem;
+  color: var(--accent-green);
+}
+
+.langsCont {
+  width: 90%;
+  max-width: 800px;
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--bg-alt);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+.langsArt {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.langsArt h4 {
+  font-size: 20px;
+  margin-bottom: 0.5rem;
+  color: var(--accent-blue);
+}
+
+.langsArt ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.langsArt ul li {
+  margin: 6px 0;
+  letter-spacing: 0.5px;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 32px;
+  }
+    .desc {
+      font-size: 24px;
+    }
+    .langsTitle  {
+      font-size: 24px;
+    }
+    .langsArt h4 {
+      font-size: 22px;
+    }
+    .langsArt ul li {
+      font-size: 22px;
+    }
+}

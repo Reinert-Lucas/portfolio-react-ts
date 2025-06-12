@@ -1,0 +1,19 @@
+:root {
+  --bg-main: #412D55;
+  --bg-alt: #2D2A3D;
+  --text-main: #EAEAEA;
+  --accent-blue: #6EC1E4;
+  --accent-green: #A0E8AF;
+  --font-title: 'Rajdhani', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-title);
+}
+
+body {
+    background-color: var(--violeta-ppal);
+}

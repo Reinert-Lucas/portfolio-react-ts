@@ -1,0 +1,59 @@
+.projectCard {
+  background-color: var(--bg-alt);
+  border: 2px solid var(--accent-blue);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1rem auto;
+  max-width: 700px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  font-family: var(--font-title);
+  color: var(--text-main);
+  transition: transform 0.3s ease;
+}
+
+.projectTitle {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--accent-green);
+  margin-bottom: 1rem;
+}
+
+.projectImg {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  height: 200px;
+  margin: 0 auto 1rem;
+  border-radius: 10px;
+  border: 2px solid var(--accent-blue);
+}
+
+.projectDesc {
+  font-size: 15px;
+  text-align: justify;
+  margin-bottom: 1rem;
+}
+
+.projectLinks {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.projectLinks a {
+  color: var(--accent-blue);
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.projectLinks a:hover {
+  color: var(--accent-green);
+}
+
+@media (min-width: 768px) {
+  .projectDesc {
+    font-size: 20px;
+  }
+}
