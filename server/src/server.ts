@@ -3,7 +3,8 @@ import postgres from "postgres";
 import cors from 'cors';
 import dotenv from 'dotenv';
 const corsOptions = {
-    origin: 'http://localhost:3000', //https://reinert-lucas.netlify.app
+    origin: 'http://localhost:5173', //https://reinert-lucas.netlify.app
+    methods: 'GET',
 }
 const app = express();
 const PORT = process.env.PORT;
@@ -21,6 +22,3 @@ app.get('/api/data', async (_req, res) => {
 app.listen(PORT, () => {
     console.log(`Server is running at http://localhost:${PORT}`);
 });
-
-// Todo list
-// ToDo - React TODO TODITO (Y el push de los cambios a github)
