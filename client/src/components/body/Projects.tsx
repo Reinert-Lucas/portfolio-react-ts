@@ -14,7 +14,7 @@ function Projects() {
     const [proyectos, setProyectos] = useState<Proyecto[]>([]);
 
     useEffect(() => {
-        fetch('http://localhost:3000/api/data') //https://portfolio-react-gerp.onrender.com/api/datos
+        fetch('https://portfolio-react-gerp.onrender.com/api/datos')
         .then(res => res.json())
         .then(data => setProyectos(data.response))
         .catch(err => console.error("Error: " + err));

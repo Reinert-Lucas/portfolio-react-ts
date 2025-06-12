@@ -3,8 +3,8 @@ import postgres from "postgres";
 import cors from 'cors';
 import dotenv from 'dotenv';
 const corsOptions = {
-    origin: 'http://localhost:5173', //https://reinert-lucas.netlify.app
-    // methods: 'GET',
+    origin: 'https://reinert-lucas.netlify.app',
+    methods: 'GET',
 }
 dotenv.config();
 const app = express();
