@@ -12,15 +12,30 @@ type Proyecto = {
 
 function Projects() {
     const [proyectos, setProyectos] = useState<Proyecto[]>([]);
+    const CACHE_KEY = "proyectos_cache";
+    const CACHE_TIME_KEY = "proyectos_cache_time";
+    const CACHE_DURATION = 7 * 24 * 60 * 60 * 1000; // 7 días
 
     useEffect(() => {
-        fetch('https://portfolio-react-gerp.onrender.com/api/datos')
-        .then(res => res.json())
-        .then(data => setProyectos(data.response))
-        .catch(err => console.error("Error: " + err));
+        const now = Date.now();
+        const cachedData = localStorage.getItem(CACHE_KEY);
+        const cachedTime = parseInt(localStorage.getItem(CACHE_TIME_KEY) || "0");
+
+        if (cachedData && now - cachedTime < CACHE_DURATION) {
+            setProyectos(JSON.parse(cachedData)); // Cargar datos desde el caché
+        } else {
+            fetch("https://portfolio-react-gerp.onrender.com/api/datos")
+                .then((res) => res.json())
+                .then((data) => {
+                    setProyectos(data.response); // Actualizar el estado con los datos obtenidos
+                    localStorage.setItem(CACHE_KEY, JSON.stringify(data.response)); // Guardar en caché
+                    localStorage.setItem(CACHE_TIME_KEY, now.toString()); // Guardar el tiempo de caché
+                })
+                .catch((err) => console.error("Error: " + err));
+        }
     }, []);
 
-    return(
+    return (
         <>
             <section className="projects">
                 {
