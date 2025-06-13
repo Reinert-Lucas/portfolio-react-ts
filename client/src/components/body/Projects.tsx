@@ -17,7 +17,6 @@ function Projects() {
     const CACHE_DURATION = 7 * 24 * 60 * 60 * 1000; // 7 días
 
     useEffect(() => {
-<<<<<<< HEAD
         const now = Date.now();
         const cachedData = localStorage.getItem(CACHE_KEY);
         const cachedTime = parseInt(localStorage.getItem(CACHE_TIME_KEY) || "0");
@@ -34,12 +33,6 @@ function Projects() {
                 })
                 .catch((err) => console.error("Error: " + err));
         }
-=======
-        fetch('https://portfolio-react-gerp.onrender.com/api/data')
-        .then(res => res.json())
-        .then(data => setProyectos(data.response))
-        .catch(err => console.error("Error: " + err));
->>>>>>> 251ab6cdc439418e0ffbee2bc094413dadf89367
     }, []);
 
     return (
