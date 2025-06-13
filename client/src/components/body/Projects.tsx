@@ -24,7 +24,7 @@ function Projects() {
         if (cachedData && now - cachedTime < CACHE_DURATION) {
             setProyectos(JSON.parse(cachedData)); // Cargar datos desde el caché
         } else {
-            fetch("https://portfolio-react-gerp.onrender.com/api/datos")
+            fetch("https://portfolio-react-gerp.onrender.com/api/data")
                 .then((res) => res.json())
                 .then((data) => {
                     setProyectos(data.response); // Actualizar el estado con los datos obtenidos
